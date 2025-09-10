@@ -1,0 +1,32 @@
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: #f9fafb; // soft neutral background
+  min-height: 100vh;
+}
+
+.airtableEmbed {
+  width: 100%;
+  max-width: 900px;
+  height: 80vh;
+  border: 1px solid #d1d5db; // light gray
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  // smooth animation on hover/focus
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+
+  // make it responsive
+  @media (max-width: 768px) {
+    height: 90vh;
+    border-radius: 8px;
+  }
+}
