@@ -1,0 +1,27 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.formSection {
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: #f9fafb; // bg-gray-50
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 64rem; // max-w-4xl
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.formIframe {
+  width: 100%;
+  height: 800px; // adjust based on Airtable form length
+  border: none;
+}
