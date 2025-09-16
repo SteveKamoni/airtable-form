@@ -30,3 +30,33 @@
     border-radius: 8px;
   }
 }
+
+
+.formWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 600px; // ensures wrapper has space even while loading
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: $font-body;
+  font-size: 1.25rem;
+  font-weight: $font-weight-medium;
+  color: $color-primary;
+  animation: pulse 1.5s infinite;
+  z-index: 2;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
