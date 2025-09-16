@@ -1,0 +1,43 @@
+.heroBg {
+  height: 24rem; // h-96
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../assets/NatureBG2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.heroContent {
+  max-width: 42rem; // similar to max-w-2xl
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 2.25rem; // text-4xl
+  font-weight: 700;
+  margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: 3rem; // md:text-5xl
+  }
+}
+
+.heroSubtitle {
+  font-size: 1.25rem; // text-xl
+  line-height: 1.5;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem; // md:text-2xl
+  }
+}
