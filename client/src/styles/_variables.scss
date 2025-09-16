@@ -31,11 +31,10 @@ $color-white: #ffffff;     // Utility white
 // =========================
 
 // Fonts (load in index.html via Google Fonts)
-$font-primary: "Playfair Display", serif;    // Hero / Headings
+$font-primary: "Playfair Display", serif;     // Hero / Headings
 $font-secondary: "Cormorant Garamond", serif; // Subheadings / Hero text
-$font-nav: "Montserrat", sans-serif;         // Navigation
-$font-body: "Mulish", sans-serif;            // General body text
-
+$font-nav: "Montserrat", sans-serif;          // Navigation
+$font-body: "Mulish", sans-serif;             // General body text
 
 // Font weights
 $font-weight-light: 300;
@@ -78,4 +77,3 @@ $breakpoint-desktop: 1200px;
     @media (min-width: #{$breakpoint-desktop}) { @content; }
   }
 }
-

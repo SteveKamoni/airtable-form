@@ -1,11 +1,18 @@
-import React from "react";
-import Layout from "./pages/Layout";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div>
-      <Layout />
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* Later you'll add: */}
+        {/* <Route path="/services" element={<Services />} /> */}
+        {/* <Route path="/about" element={<About />} /> */}
+      </Routes>
+    </Router>
   );
 }
 

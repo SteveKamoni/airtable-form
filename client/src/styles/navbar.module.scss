@@ -1,0 +1,115 @@
+/* =========================
+   🌐 NAVBAR STYLING
+   ========================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $color-white;
+  z-index: 50;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+
+  &.scrolled {
+    background: $color-white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-family: $font-primary;
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    text-decoration: none;
+
+    span {
+      color: $color-accent;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      font-family: $font-nav;
+      font-weight: $font-weight-medium;
+      color: $color-text;
+      text-decoration: none;
+      padding: 0.25rem 0;
+      transition: color 0.3s, border-color 0.3s;
+
+      &:hover {
+        color: $color-accent;
+      }
+
+      &.active {
+        border-bottom: 2px solid $color-accent;
+        color: $color-primary;
+      }
+    }
+  }
+
+  .mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    svg {
+      stroke: $color-text;
+    }
+
+    @include respond-to("tablet") {
+      display: block;
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    background: $color-white;
+
+    a {
+      font-family: $font-nav;
+      font-weight: $font-weight-medium;
+      padding: 0.75rem 0;
+      text-decoration: none;
+      color: $color-text;
+
+      &:hover {
+        color: $color-accent;
+      }
+
+      &.active {
+        border-left: 3px solid $color-accent;
+        padding-left: 0.5rem;
+        color: $color-primary;
+      }
+    }
+
+    &.open {
+      display: flex;
+    }
+
+    @include respond-to("tablet") {
+      display: none;
+    }
+  }
+
+  @include respond-to("tablet") {
+    .nav-links {
+      display: none;
+    }
+  }
+}
