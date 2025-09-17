@@ -35,6 +35,13 @@
       color: $color-primary;
       margin-bottom: 1rem;
     }
+
+    p {
+      font-family: $font-body;
+      font-size: 1.1rem;
+      color: $color-text;
+      opacity: 0.9;
+    }
   }
 
   .content {

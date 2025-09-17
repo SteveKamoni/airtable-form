@@ -23,9 +23,11 @@
     font-family: $font-primary;
     font-weight: $font-weight-semibold;
     color: $color-primary;
-
+    
     img {
       height: 40px;
+      width: 40px;
+      border-radius:100%;
       margin-right: 0.6rem;
       transition: transform 0.3s ease-in-out;
     }

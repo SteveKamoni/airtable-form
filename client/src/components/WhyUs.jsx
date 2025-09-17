@@ -19,6 +19,9 @@ const WhyUs = () => {
         <div className={styles.header} 
         >
           <h1>WHY US</h1>
+           <p>
+          Compassionate, professional, and personalized — our services are designed to meet your unique needs with dignity and respect.
+        </p>
         </div>
       <div className={styles.container}>
         {/* Left: Checklist */}

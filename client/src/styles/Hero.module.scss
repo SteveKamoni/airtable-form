@@ -17,12 +17,12 @@
   overflow: hidden;
 
   .content {
-    max-width: 600px;
+    max-width: 1200px;
     animation: fadeInUp 1s ease forwards;
 
     .subtitle {
       font-family: $font-secondary;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       margin-bottom: 0.8rem;
       opacity: 0.9;
     }
@@ -30,22 +30,23 @@
     .title {
       font-family: $font-primary;
       font-weight: $font-weight-bold;
-      font-size: 3rem;
+      font-size: 7rem;
       line-height: 1.2;
       margin-bottom: 1rem;
     }
 
     .description {
       font-family: $font-body;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       line-height: 1.6;
       margin-bottom: 2rem;
       opacity: 0.95;
+      max-width: 800px;
     }
 
     .ctaGroup {
       display: flex;
-      gap: 1rem;
+      gap: 3rem;
 
       .primaryBtn {
         background-color: $color-accent;
