@@ -23,14 +23,14 @@
 
   .brand {
     h2 {
-      font-size: 1.6rem;
+      font-size: 2rem;
       font-family: $font-primary;
       color: $color-accent;
       margin-bottom: 0.5rem;
     }
 
     p {
-      font-size: 0.95rem;
+      font-size: 1.2rem;
       line-height: 1.5;
       color: rgba($color-light, 0.85);
     }
@@ -38,7 +38,7 @@
 
   .links {
     h3 {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin-bottom: 1rem;
       color: $color-white;
     }
@@ -49,7 +49,7 @@
 
       li {
         margin: 0.5rem 0;
-
+        font-size: 1rem;
         a {
           text-decoration: none;
           color: $color-light;
@@ -65,7 +65,7 @@
 
   .contact {
     h3 {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin-bottom: 1rem;
       color: $color-white;
     }
@@ -75,7 +75,7 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
 
     svg {
@@ -86,7 +86,7 @@
 
   .socials {
     h3 {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin-bottom: 1rem;
       color: $color-white;
     }
@@ -113,14 +113,14 @@
 
   .newsletter {
     h3 {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin-bottom: 1rem;
       color: $color-white;
     }
 
     p {
       margin-bottom: 1rem;
-      font-size: 0.95rem;
+      font-size: 1.2rem;
     }
 
     form {

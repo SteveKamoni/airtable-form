@@ -17,15 +17,15 @@
 
     h2 {
       font-family: $font-primary;
-      font-size: 2.5rem;
+      font-size: 5rem;
       font-weight: $font-weight-bold;
       color: $color-primary;
       margin-bottom: 1rem;
     }
 
     p {
-      font-family: $font-body;
-      font-size: 1.1rem;
+      font-family: $font-secondary;
+      font-size: 1.2rem;
       color: $color-text;
       opacity: 0.9;
     }
@@ -86,8 +86,8 @@
     }
 
     h3 {
-      font-family: $font-secondary;
-      font-size: 1.4rem;
+      font-family: $font-primary;
+      font-size: 1.5rem;
       font-weight: $font-weight-semibold;
       margin-bottom: 0.8rem;
       color: inherit;
