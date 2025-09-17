@@ -1,115 +1,126 @@
-/* =========================
-   🌐 NAVBAR STYLING
-   ========================= */
-
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  background: $color-white;
-  z-index: 50;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  background-color: $color-white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
 
-  &.scrolled {
-    background: $color-white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  }
-
-  .nav-container {
+  .navContainer {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.5rem;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
   }
 
+  // ===== Logo Section =====
   .logo {
+    display: flex;
+    align-items: center;
     font-family: $font-primary;
-    font-size: 1.5rem;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-semibold;
     color: $color-primary;
-    text-decoration: none;
 
-    span {
-      color: $color-accent;
+    img {
+      height: 40px;
+      margin-right: 0.6rem;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
     }
   }
 
-  .nav-links {
+  // ===== Nav Links =====
+  .navLinks {
     display: flex;
+    align-items: center;
     gap: 1.5rem;
 
     a {
+      text-decoration: none;
+      color: $color-text;
       font-family: $font-nav;
       font-weight: $font-weight-medium;
-      color: $color-text;
-      text-decoration: none;
-      padding: 0.25rem 0;
-      transition: color 0.3s, border-color 0.3s;
+      transition: color 0.3s ease-in-out;
 
       &:hover {
         color: $color-accent;
       }
+    }
 
-      &.active {
-        border-bottom: 2px solid $color-accent;
-        color: $color-primary;
+    .referralBtn {
+      background-color: $color-accent;
+      color: $color-white;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-weight: $font-weight-semibold;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $color-secondary;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       }
     }
   }
 
-  .mobile-menu-button {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    svg {
-      stroke: $color-text;
-    }
-
-    @include respond-to("tablet") {
-      display: block;
-    }
-  }
-
-  .mobile-menu {
+  // ===== Hamburger Menu (mobile) =====
+  .hamburger {
     display: none;
     flex-direction: column;
-    padding: 1rem 2rem;
-    background: $color-white;
+    cursor: pointer;
+    gap: 5px;
 
-    a {
-      font-family: $font-nav;
-      font-weight: $font-weight-medium;
-      padding: 0.75rem 0;
-      text-decoration: none;
-      color: $color-text;
-
-      &:hover {
-        color: $color-accent;
-      }
-
-      &.active {
-        border-left: 3px solid $color-accent;
-        padding-left: 0.5rem;
-        color: $color-primary;
-      }
+    span {
+      width: 25px;
+      height: 3px;
+      background-color: $color-primary;
+      border-radius: 2px;
+      transition: all 0.3s ease-in-out;
     }
 
-    &.open {
-      display: flex;
+    .barActive:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
     }
-
-    @include respond-to("tablet") {
-      display: none;
+    .barActive:nth-child(2) {
+      opacity: 0;
+    }
+    .barActive:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
     }
   }
 
-  @include respond-to("tablet") {
-    .nav-links {
-      display: none;
+  // ===== Responsive =====
+  @include respond-to('tablet') {
+    .navLinks {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: $color-white;
+      flex-direction: column;
+      width: 220px;
+      padding: 1rem;
+      gap: 1rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+
+      &.active {
+        transform: translateX(0);
+      }
+
+      a {
+        padding: 0.5rem 0;
+      }
+    }
+
+    .hamburger {
+      display: flex;
     }
   }
 }

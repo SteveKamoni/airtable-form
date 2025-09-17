@@ -1,18 +1,21 @@
+import React from "react";
 import styles from "../styles/Hero.module.scss";
-import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <section className={styles.hero}>
-      <div className={styles["hero-content"]}>
-        <h1>Compassionate Care at Home</h1>
-        <p>
-          Providing personalized, professional home-care services to support your
-          loved ones with dignity and respect.
+      <div className={styles.content}>
+        <h3 className={styles.subtitle}>Because every life deserves dignity</h3>
+        <h1 className={styles.title}>
+          Compassionate Homecare <br /> for Your Loved Ones
+        </h1>
+        <p className={styles.description}>
+          Providing trusted, professional, and heartfelt support — right in the comfort of home.
         </p>
-        <Link to="/services" className={styles["cta-btn"]}>
-          Explore Our Services
-        </Link>
+        <div className={styles.ctaGroup}>
+          <button className={styles.primaryBtn}>Get Care</button>
+          <button className={styles.secondaryBtn}>Refer a Loved One</button>
+        </div>
       </div>
     </section>
   );

@@ -1,0 +1,72 @@
+.cta {
+  padding: 5rem 8%;
+  background: linear-gradient(135deg, $color-primary, $color-secondary);
+  text-align: center;
+  color: $color-white;
+  border-radius: 1.5rem;
+  margin: 4rem auto;
+  max-width: 1100px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.8s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .content {
+    max-width: 700px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.2rem;
+      font-weight: $font-weight-bold;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: rgba($color-white, 0.9);
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    @include respond-to("phone") {
+      flex-direction: column;
+    }
+
+    .btn {
+      padding: 0.9rem 2rem;
+      font-size: 1rem;
+      font-weight: $font-weight-semibold;
+      border-radius: 2rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &.primary {
+        background: $color-accent;
+        color: $color-white;
+
+        &:hover {
+          background: color.adjust($color-accent,$lightness: -7%);
+        }
+      }
+
+      &.secondary {
+        background: transparent;
+        border: 2px solid $color-white;
+        color: $color-white;
+
+        &:hover {
+          background: rgba($color-white, 0.15);
+        }
+      }
+    }
+  }
+}

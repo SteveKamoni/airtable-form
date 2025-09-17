@@ -1,0 +1,95 @@
+.testimonials {
+  padding: 6rem 8%;
+  background: $color-white;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .header {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+
+    h2 {
+      font-size: 2.2rem;
+      font-weight: $font-weight-bold;
+      color: $color-primary;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: $color-text;
+      opacity: 0.9;
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @include respond-to("tablet") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    background: $color-white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(40px);
+
+    &.fadeIn {
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.2rem;
+      border: 3px solid $color-accent;
+    }
+
+    .quote {
+      font-size: 1rem;
+      font-style: italic;
+      color: $color-text;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: $font-weight-semibold;
+      color: $color-primary;
+    }
+
+    span {
+      font-size: 0.95rem;
+      color: $color-secondary;
+    }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

@@ -1,64 +1,112 @@
-/* =========================
-   💡 WHY CHOOSE US SECTION
-   ========================= */
-.whyChooseUs {
-  padding: 5rem 2rem;
-  background-color: $color-light;
-  text-align: center;
+.whyUs {
+  padding: 6rem 8%;
+  background: $color-white;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
 
-  .section-header {
-    font-family: $font-primary;
-    font-size: 2.25rem;
-    font-weight: $font-weight-bold;
-    color: $color-primary;
-    margin-bottom: 2rem;
-    animation: fadeInDown 1s ease;
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
-  .intro {
-    max-width: 700px;
-    margin: 0 auto 3rem;
-    font-family: $font-body;
-    font-size: 1.125rem;
-    color: $color-text;
-    line-height: 1.6;
-    animation: fadeIn 1.2s ease;
-  }
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
 
-  .reasons-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .reason-card {
-    background: $color-white;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeInUp 1.2s ease;
-
-    &:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    @include respond-to("tablet") {
+      flex-direction: column;
+      text-align: center;
     }
+  }
 
-    h3 {
-      font-family: $font-secondary;
-      font-size: 1.5rem;
-      font-weight: $font-weight-semibold;
+  .header{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 3rem auto;
+
+    h1 {
+      font-family: $font-primary;
+      font-size: 2.5rem;
+      font-weight: $font-weight-bold;
+      color: $color-primary;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .content {
+    flex: 1;
+
+    h2 {
+      font-size: 2.2rem;
+      font-weight: $font-weight-bold;
       color: $color-primary;
       margin-bottom: 1rem;
     }
 
     p {
-      font-family: $font-body;
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: $color-text;
-      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      opacity: 0;
+      transform: translateX(-40px);
+
+      &.fadeIn {
+        animation: slideIn 0.8s ease forwards;
+      }
+
+      .icon {
+        font-size: 1.3rem;
+        color: $color-accent;
+        flex-shrink: 0;
+        margin-top: 0.25rem;
+      }
+
+      span {
+        font-size: 1rem;
+        font-weight: $font-weight-medium;
+        color: $color-text;
+      }
+    }
+  }
+
+  .imageSide {
+    flex: 1;
+
+    .image {
+      width: 100%;
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 }

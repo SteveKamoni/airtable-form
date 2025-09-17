@@ -1,0 +1,116 @@
+.services {
+  padding: 5rem 8%;
+  background: $color-white;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .header {
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+
+    h2 {
+      font-family: $font-primary;
+      font-size: 2.5rem;
+      font-weight: $font-weight-bold;
+      color: $color-primary;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-family: $font-body;
+      font-size: 1.1rem;
+      color: $color-text;
+      opacity: 0.9;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    @include respond-to('tablet') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to('phone') {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    background: $color-white;
+    padding: 2.5rem 2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: scale(0.9);
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &.fadeIn {
+      animation: zoomIn 0.8s ease forwards;
+    }
+
+    &:nth-child(odd) {
+      transform: translateY(30px); // subtle stagger
+    }
+
+    &:hover {
+      background: $color-accent;
+      color: $color-white;
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+
+      .icon {
+        color: $color-white;
+      }
+    }
+
+    .icon {
+      font-size: 2.8rem;
+      color: $color-accent;
+      margin-bottom: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    h3 {
+      font-family: $font-secondary;
+      font-size: 1.4rem;
+      font-weight: $font-weight-semibold;
+      margin-bottom: 0.8rem;
+      color: inherit;
+    }
+
+    p {
+      font-family: $font-body;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: inherit;
+      opacity: 0.9;
+    }
+  }
+
+  // Animations
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+}

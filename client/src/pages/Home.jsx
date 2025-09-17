@@ -1,11 +1,18 @@
 import React from "react";
 import Hero from "../components/Hero";
-import WhyChooseUs from "../components/WhyUs";
+import WhyUs from "../components/WhyUs";
+import CareServices from "../components/CareServices";
+import Testimonials from "../components/Testimonials";
+import ReadyToStart from "../components/ReadyToStart";
+
 const Home = () => {
   return (
     <div>
       <Hero/>
-      <WhyChooseUs/>
+      <CareServices/>
+      <WhyUs/>
+      <Testimonials/>
+      <ReadyToStart/>
     </div>
   );
 };

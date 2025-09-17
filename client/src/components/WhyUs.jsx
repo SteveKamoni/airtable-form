@@ -1,43 +1,58 @@
 import React from "react";
 import styles from "../styles/WhyUs.module.scss";
+import { FaCheckCircle } from "react-icons/fa";
+import useInView from "../hooks/useInview";
+import imge from "../assets/NatureBG.jpg";
 
-const WhyChooseUs = () => {
-  const reasons = [
-    {
-      title: "Trusted Professionals",
-      desc: "Our caregivers are fully trained, vetted, and passionate about delivering quality care."
-    },
-    {
-      title: "Personalized Care Plans",
-      desc: "We tailor our services to fit the unique needs of every individual and family."
-    },
-    {
-      title: "24/7 Availability",
-      desc: "Support and care whenever you need it — day or night."
-    },
-    {
-      title: "Compassionate Approach",
-      desc: "We treat every client with dignity, respect, and genuine compassion."
-    }
-  ];
+const points = [
+  "Compassionate caregivers dedicated to your wellbeing",
+  "Flexible plans tailored to individual needs",
+  "Trusted and professional support staff",
+  "Consistent quality care you can rely on"
+];
+
+const WhyUs = () => {
+  const [ref, isVisible] = useInView();
 
   return (
-    <section className={styles.whyChooseUs}>
-      <h2 className={styles["section-header"]}>Why Choose Us</h2>
-      <p className={styles.intro}>
-        Choosing the right home-care service is a big decision. Here’s why families
-        trust us to care for their loved ones:
-      </p>
-      <div className={styles["reasons-grid"]}>
-        {reasons.map((reason, index) => (
-          <div key={index} className={styles["reason-card"]}>
-            <h3>{reason.title}</h3>
-            <p>{reason.desc}</p>
-          </div>
-        ))}
+    <section ref={ref} className={`${styles.whyUs} ${isVisible ? styles.visible : ""}`}>
+        <div className={styles.header} 
+        >
+          <h1>WHY US</h1>
+        </div>
+      <div className={styles.container}>
+        {/* Left: Checklist */}
+        <div className={styles.content}>
+          <h2>Why Choose Us</h2>
+          <p>
+            At Compassionate Care, we go beyond basic assistance. Our focus is on
+            building trust, dignity, and lasting relationships with every client.
+          </p>
+          <ul className={styles.list}>
+            {points.map((point, i) => (
+              <li
+                key={i}
+                className={`${styles.item} ${isVisible ? styles.fadeIn : ""}`}
+                style={{ animationDelay: `${i * 0.2}s` }}
+              >
+                <FaCheckCircle className={styles.icon} />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Right: Image */}
+        <div className={styles.imageSide}>
+          <img
+            src={imge}
+            alt="Caregiver smiling with client"
+            className={styles.image}
+          />
+        </div>
       </div>
     </section>
   );
 };
 
-export default WhyChooseUs;
+export default WhyUs;
