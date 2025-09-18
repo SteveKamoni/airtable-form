@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../styles/ServiceHero.module.scss";
-import heroImg from "../assets/NatureBG.jpg"; // ✅ correct import (make sure file exists)
+import heroImg from "../assets/NatureBG.jpg"; 
+
 
 const ServicesHero = () => {
   const ref = useRef(null);
@@ -9,16 +10,21 @@ const ServicesHero = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-        }
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.unobserve(entry.target); // stops observing once visible
+          }
+        });
       },
       { threshold: 0.3 }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    const currentRef = ref.current;
+    if (currentRef) observer.observe(currentRef);
+
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (currentRef) observer.unobserve(currentRef);
     };
   }, []);
 
@@ -37,6 +43,7 @@ const ServicesHero = () => {
           Compassionate support designed to improve quality of life for you and
           your loved ones. Explore the services we proudly provide.
         </p>
+        <button className={styles.secondaryBtn}>Refer a Loved One</button>        
       </div>
     </header>
   );

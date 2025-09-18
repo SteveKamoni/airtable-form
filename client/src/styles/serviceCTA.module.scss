@@ -21,21 +21,24 @@
     margin: 0 auto;
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       margin-bottom: 1.5rem;
       font-weight: 700;
+      font-family: $font-primary;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       margin-bottom: 2.5rem;
       line-height: 1.6;
+      font-family: $font-secondary;
+
     }
 
     .buttons {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 3rem;
       flex-wrap: wrap;
     }
 
@@ -70,3 +73,4 @@
     }
   }
 }
+

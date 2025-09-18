@@ -15,16 +15,17 @@
     margin: 0 auto 3.5rem;
 
     h2 {
-      font-size: 2.6rem;
+      font-size: 5rem;
       font-family: $font-primary;
       color: $color-primary;
       margin-bottom: 1rem;
     }
-
+    
     p {
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       color: $color-text;
       line-height: 1.6;
+      font-family: $font-secondary;
     }
   }
 
@@ -67,6 +68,7 @@
       font-size: 1.5rem;
       margin-bottom: 0.8rem;
       color: $color-primary;
+      font-family: $font-primary;
     }
 
     .description {
@@ -74,6 +76,7 @@
       color: $color-text;
       margin-bottom: 1.2rem;
       line-height: 1.5;
+      font-family: $font-body;
     }
 
     .benefits {

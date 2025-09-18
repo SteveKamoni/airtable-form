@@ -2,6 +2,7 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import styles from "../styles/serviceHighlights.module.scss";
 import placimg1 from "../assets/NatureBG.jpg"
+import { FaCheckCircle } from "react-icons/fa";
 
 
 const highlights = [
@@ -52,7 +53,10 @@ const HighlightItem = ({ item, reverse }) => {
         <p>{item.description}</p>
         <ul>
           {item.checklist.map((point, i) => (
+            <div className={styles.item}>
+            <FaCheckCircle className={styles.icon} />
             <li key={i}>{point}</li>
+            </div>
           ))}
         </ul>
       </div>
@@ -63,8 +67,8 @@ const HighlightItem = ({ item, reverse }) => {
 const ServiceHighlights = () => {
   return (
     <section className={styles.highlights}>
+        <h2 className={styles.sectionTitle}>Care That Fits You</h2>
       <div className={styles.container}>
-        <h2 className={styles.sectionTitle}>Personalized Care Tailored to Every Need</h2>
         {highlights.map((item, index) => (
           <HighlightItem
             key={item.id}
