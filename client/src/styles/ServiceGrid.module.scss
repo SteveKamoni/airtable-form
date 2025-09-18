@@ -1,0 +1,117 @@
+.services {
+  padding: 6rem 6%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .header {
+    max-width: 750px;
+    margin: 0 auto 3.5rem;
+
+    h2 {
+      font-size: 2.6rem;
+      font-family: $font-primary;
+      color: $color-primary;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.15rem;
+      color: $color-text;
+      line-height: 1.6;
+    }
+  }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // Always 3 per row on desktop
+  gap: 2.5rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr); // 2 per row on tablet
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    grid-template-columns: 1fr; // 1 per row on mobile
+  }
+}
+
+
+  .card {
+    background: $color-white;
+    border-radius: 1.2rem;
+    padding: 2.5rem 2rem;
+    text-align: left;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.12);
+      border-color: $color-accent;
+    }
+
+    .icon {
+      color: $color-accent;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+      color: $color-primary;
+    }
+
+    .description {
+      font-size: 1rem;
+      color: $color-text;
+      margin-bottom: 1.2rem;
+      line-height: 1.5;
+    }
+
+    .benefits {
+      margin-bottom: 1.5rem;
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        position: relative;
+        padding-left: 1.6rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+        color: $color-text;
+
+        &::before {
+          content: "✔";
+          position: absolute;
+          left: 0;
+          color: $color-accent;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .cta {
+      background: $color-accent;
+      color: $color-white;
+      font-size: 0.95rem;
+      font-weight: $font-weight-medium;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.6rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: color.adjust($color-accent,$lightness: -8%);
+      }
+    }
+  }
+}

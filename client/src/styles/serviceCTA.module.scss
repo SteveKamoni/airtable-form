@@ -1,0 +1,72 @@
+.ctaSection {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../assets/NatureBG2.jpg") center/cover no-repeat;
+  padding: 6rem 2rem;
+  color: #fff;
+  text-align: center;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  opacity: 0;
+  transform: translateY(50px);margin-top: 4rem;
+
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .primaryBtn {
+      background: $color-primary;
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: color.adjust($color-primary,$lightness: -10%);
+      }
+    }
+
+    .secondaryBtn {
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #fff;
+        color: $color-primary;
+      }
+    }
+  }
+}
