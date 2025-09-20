@@ -2,10 +2,10 @@ import React from "react";
 import styles from "../styles/FeaturedArticles.module.scss";
 
 // replace with actual imports (include file extensions)
-import img1 from "../assets/NatureBG.jpg";
-import img2 from "../assets/NatureBG2.jpg";
-import img3 from "../assets/NatureBG.jpg";
-import img4 from "../assets/NatureBG2.jpg";
+import choose from "../assets/ChooseHomeCarePlan.jpg";
+import mealplanning from "../assets/MealPlanning.jpg";
+import saferhome from "../assets/SaferHome.jpg";
+import respitecare from "../assets/RespiteCare.jpg";
 
 /**
  * FadeInOnView
@@ -61,7 +61,7 @@ const featured = [
     date: "Sep 5, 2025",
     excerpt:
       "A practical guide to evaluating care needs, comparing service types, and selecting the right plan for your family.",
-    image: img1,
+    image: choose,
     href: "/resources/how-to-choose-homecare",
   },
   {
@@ -70,7 +70,7 @@ const featured = [
     date: "Aug 20, 2025",
     excerpt:
       "Nutrition tips and meal ideas tailored to common dietary needs for older adults and those with chronic conditions.",
-    image: img2,
+    image: mealplanning,
     href: "/resources/meal-planning-seniors",
   },
   {
@@ -79,7 +79,7 @@ const featured = [
     date: "Jul 8, 2025",
     excerpt:
       "Small, cost-effective changes that reduce fall risk and make daily life easier for people with mobility limits.",
-    image: img3,
+    image: saferhome,
     href: "/resources/safer-home-checklist",
   },
   {
@@ -88,7 +88,7 @@ const featured = [
     date: "Jun 12, 2025",
     excerpt:
       "What respite care offers, how to plan for it, and real-world benefits for caregivers and their families.",
-    image: img4,
+    image: respitecare,
     href: "/resources/respite-care-explained",
   },
 ];

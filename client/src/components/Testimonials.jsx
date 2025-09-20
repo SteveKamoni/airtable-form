@@ -1,27 +1,29 @@
 import React from "react";
 import styles from "../styles/Testimonials.module.scss";
 import useInView from "../hooks/useInview";
-import img1 from "../assets/NatureBG.jpg"
+import test1 from "../assets/test1.jpg"
+import test2 from "../assets/test2.jpg"
+import test3 from "../assets/test3.jpg"
 
 const testimonials = [
   {
     name: "Sarah Johnson",
     role: "Daughter of Client",
-    image: img1,
+    image: test1,
     quote:
       "Compassionate Care has been a blessing for our family. The caregivers treat my mother with kindness and respect every day."
   },
   {
-    name: "Michael Lee",
+    name: "Michael Roberts",
     role: "Client",
-    image: img1,
+    image: test2,
     quote:
       "Their team made me feel comfortable and independent again. I couldn’t have asked for better support."
   },
   {
-    name: "Emily Roberts",
+    name: "Emily Fetcher",
     role: "Family Caregiver",
-    image: img1,
+    image: test3,
     quote:
       "The respite care services gave me peace of mind and the chance to recharge. Truly life-changing."
   }

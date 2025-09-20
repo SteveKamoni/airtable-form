@@ -1,8 +1,10 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import styles from "../styles/serviceHighlights.module.scss";
-import placimg1 from "../assets/NatureBG.jpg"
 import { FaCheckCircle } from "react-icons/fa";
+import compassion from "../assets/CompassionSteps.jpg"
+import personalized from "../assets/PersonalizedCare.jpg"
+import safety from "../assets/SafetyReliable.jpg"
 
 
 const highlights = [
@@ -12,7 +14,7 @@ const highlights = [
     description:
       "Our caregivers provide not only physical support but also emotional companionship, ensuring comfort and dignity for every client.",
     checklist: ["Emotional support", "Respectful assistance", "Trusted relationships"],
-    image: placimg1,
+    image: compassion,
   },
   {
     id: 2,
@@ -20,7 +22,7 @@ const highlights = [
     description:
       "Every individual is unique. We tailor our care services to match specific needs, preferences, and health conditions for better outcomes.",
     checklist: ["Custom routines", "Health-focused care", "Family collaboration"],
-    image: placimg1,
+    image: personalized,
   },
   {
     id: 3,
@@ -28,7 +30,7 @@ const highlights = [
     description:
       "We ensure safe, dependable, and professional care with vetted staff, rigorous training, and continuous monitoring.",
     checklist: ["24/7 availability", "Trained professionals", "Secure processes"],
-    image: placimg1,
+    image: safety,
   },
 ];
 

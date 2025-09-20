@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../styles/ServiceHero.module.scss";
-import heroImg from "../assets/NatureBG.jpg"; 
+import heroImg from "../assets/ServiceHero.jpg"; 
 
 
 const ServicesHero = () => {
