@@ -4,11 +4,13 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Services from "./pages/Services";
 import ResourcesPage from "./pages/ResourcesPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/services" element={<Services/>}/>
