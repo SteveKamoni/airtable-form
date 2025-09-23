@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../styles/navbar.module.scss";
-import logo from "../assets/NatureBG.jpg"
+import logo from "../assets/NatureBG.webp"
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 

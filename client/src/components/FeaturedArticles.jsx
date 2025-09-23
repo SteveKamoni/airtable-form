@@ -2,10 +2,10 @@ import React from "react";
 import styles from "../styles/FeaturedArticles.module.scss";
 
 // replace with actual imports (include file extensions)
-import choose from "../assets/ChooseHomeCarePlan.jpg";
-import mealplanning from "../assets/MealPlanning.jpg";
-import saferhome from "../assets/SaferHome.jpg";
-import respitecare from "../assets/RespiteCare.jpg";
+import choose from "../assets/ChooseHomeCarePlan.webp";
+import mealplanning from "../assets/MealPlanning.webp";
+import saferhome from "../assets/SaferHome.webp";
+import respitecare from "../assets/RespiteCare.webp";
 
 /**
  * FadeInOnView

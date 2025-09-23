@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "../styles/Testimonials.module.scss";
 import useInView from "../hooks/useInview";
-import test1 from "../assets/test1.jpg"
-import test2 from "../assets/test2.jpg"
-import test3 from "../assets/test3.jpg"
+import test1 from "../assets/test1.webp"
+import test2 from "../assets/test2.webp"
+import test3 from "../assets/test3.webp"
 
 const testimonials = [
   {

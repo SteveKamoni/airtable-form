@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/resourceCategories.module.scss";
-import img1 from "../assets/NatureBG.jpg";
-import img2 from "../assets/NatureBG2.jpg";
+import img1 from "../assets/NatureBG.webp";
+import img2 from "../assets/NatureBG2.webp";
 
 const resources = [
   {

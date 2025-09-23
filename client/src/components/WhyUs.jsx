@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/WhyUs.module.scss";
 import { FaCheckCircle } from "react-icons/fa";
 import useInView from "../hooks/useInview";
-import imge from "../assets/WhyUs.jpg";
+import imge from "../assets/WhyUs.webp";
 
 const points = [
   "Compassionate caregivers dedicated to your wellbeing",

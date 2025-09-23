@@ -2,9 +2,9 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import styles from "../styles/serviceHighlights.module.scss";
 import { FaCheckCircle } from "react-icons/fa";
-import compassion from "../assets/CompassionSteps.jpg"
-import personalized from "../assets/PersonalizedCare.jpg"
-import safety from "../assets/SafetyReliable.jpg"
+import compassion from "../assets/CompassionSteps.webp"
+import personalized from "../assets/PersonalizedCare.webp"
+import safety from "../assets/SafetyReliable.webp"
 
 
 const highlights = [
