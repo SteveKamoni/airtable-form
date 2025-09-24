@@ -1,0 +1,87 @@
+.aboutHero {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 6%;
+  overflow: hidden;
+
+  .bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.55);
+    transform: scale(1.05);
+    transition: transform 6s ease;
+  }
+
+  &:hover .bgImage {
+    transform: scale(1.08);
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba($color-primary, 0.8) 0%,
+      rgba($color-primary, 0.5) 60%,
+      rgba($color-primary, 0.2) 100%
+    );
+    z-index: 1;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    animation: fadeInUp 1.2s ease forwards;
+
+    .subtitle {
+      font-family: $font-secondary;
+      font-size: 1.5rem;
+      font-weight: $font-weight-medium;
+      color: $color-accent;
+      margin-bottom: 0.8rem;
+      letter-spacing: 1px;
+    }
+
+    .title {
+      font-family: $font-primary;
+      font-size: 5rem;
+      font-weight: $font-weight-bold;
+      color: $color-white;
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
+
+      @include respond-to("phone") {
+        font-size: 2.2rem;
+      }
+    }
+
+    .text {
+      font-family: $font-body;
+      font-size: 1.3rem;
+      color: $color-white;
+      line-height: 1.7;
+      max-width: 90%;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

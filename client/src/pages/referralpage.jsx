@@ -1,13 +1,11 @@
 import React from 'react'
-import AirtableForm from '../components/referralform'
-import FormHero from '../components/referralhero'
+import ReferralHero from '../components/ReferralHero'
 
 const ReferralPage = () => {
   return (
-    <div>
-        <FormHero/>
-        <AirtableForm/>
-    </div>
+    <>
+      <ReferralHero />
+    </>
   )
 }
 

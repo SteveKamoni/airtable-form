@@ -1,0 +1,42 @@
+.hero {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom right, #f9fafb, #eef5f1);
+  padding: 0 2rem;
+
+  .content {
+    max-width: 700px;
+
+    h1 {
+      font-size: 3rem;
+      color: $color-primary;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: $color-text;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    button {
+      background: $color-primary;
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: color.adjust($color-primary,$lightness: -10%);
+        transform: translateY(-3px);
+      }
+    }
+  }
+}

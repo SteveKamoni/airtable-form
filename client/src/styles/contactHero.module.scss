@@ -1,0 +1,71 @@
+.hero {
+  height: 70vh;
+  background: linear-gradient(
+      rgba($color-primary, 0.7),
+      rgba($color-primary, 0.7)
+    ),
+    url("../assets/ServiceHero.webp") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 5rem;
+  color: $color-white;
+  text-align: left;
+
+  @include respond-to("phone") {
+    padding: 0 2rem;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.content {
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  h3 {
+    font-family: $font-secondary;
+    font-weight: $font-weight-medium;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    color: $color-accent;
+  }
+
+  h1 {
+    font-family: $font-primary;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  p {
+    font-family: $font-body;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: $color-light;
+  }
+
+  .ctaBtn {
+    background: $color-accent;
+    color: $color-white;
+    font-family: $font-nav;
+    font-weight: $font-weight-semibold;
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background: darken($color-accent, 10%);
+      transform: translateY(-3px);
+    }
+  }
+}
