@@ -20,7 +20,7 @@
 }
 
 .content {
-  max-width: 600px;
+  max-width: 900px;
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -32,24 +32,24 @@
 
   h3 {
     font-family: $font-secondary;
-    font-weight: $font-weight-medium;
-    font-size: 1.4rem;
+    font-weight: $font-weight-semibold;
+    font-size: 1.5rem;
     margin-bottom: 0.8rem;
     color: $color-accent;
   }
 
   h1 {
     font-family: $font-primary;
-    font-size: 3rem;
+    font-size: 5rem;
     margin-bottom: 1rem;
     line-height: 1.2;
   }
 
   p {
     font-family: $font-body;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
-    color: $color-light;
+    color: $color-white;
   }
 
   .ctaBtn {
@@ -64,7 +64,7 @@
     transition: background 0.3s ease, transform 0.3s ease;
 
     &:hover {
-      background: darken($color-accent, 10%);
+      background: color.adjust($color-accent,$lightness: -10%);
       transform: translateY(-3px);
     }
   }
