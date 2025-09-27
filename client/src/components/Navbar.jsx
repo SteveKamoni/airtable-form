@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../styles/navbar.module.scss";
-import logo from "../assets/NatureBG.webp"
+import logo from "../assets/logo.jpeg"
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -13,7 +13,7 @@ const Navbar = () => {
         {/* Left side: Logo and Name */}
         <div className={styles.logo}>
           <img src={logo} alt="Compassionate Care Logo" />
-          <span>Compassionate Care</span>
+          <span>Akdar Home Care Services</span>
         </div>
 
         {/* Right side: Links */}

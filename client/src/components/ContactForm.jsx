@@ -36,8 +36,6 @@ const ContactSection = () => {
             className={styles.airtableEmbed}
             src="https://airtable.com/embed/appXQcUUnu2s5DKku/pagT1uefFjRu9UWWh/form"
             frameBorder="0"
-            width="100%"
-            height="800"
             title="Contact Form"
           ></iframe>
                </div>

@@ -1,27 +1,29 @@
-import React, { useEffect } from "react";
-import styles from "../styles/formhero.module.scss";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
+import styles from "../styles/referralHero.module.scss";
+import { motion } from "framer-motion";
 
-const FormHero = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+const ReferralHero = () => {
+  const scrollToForm = () => {
+    document.getElementById("referral").scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <section className={styles.heroBg}>
-      <div
-        className={styles.heroContent}
-        data-aos="fade-up"
-        data-aos-duration="800"
+    <section className={styles.hero}>
+      <motion.div
+        className={styles.content}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
       >
-        <h1 className={styles.heroTitle}>Get in Touch</h1>
-        <p className={styles.heroSubtitle}>
-          We'd love to hear from you. Reach out and let's start a conversation.
+        <h1>Share Compassion, Spread Care</h1>
+        <p>
+          Invite your friends or family to experience our trusted home care services.
+          Together, we can make every day more comfortable and fulfilling.
         </p>
-      </div>
+        <button onClick={scrollToForm}>Refer Someone</button>
+      </motion.div>
     </section>
   );
 };
 
-export default FormHero;
+export default ReferralHero;

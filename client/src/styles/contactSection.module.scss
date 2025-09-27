@@ -1,6 +1,6 @@
 .contactSection {
   padding: 6rem 5rem;
-  background: $color-light;
+  background: $color-bg-comp;
   display: flex;
   justify-content: center;
   margin-top: 4rem;
@@ -15,7 +15,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 10rem;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1800px;
   background: $color-white;
   border-radius: 1rem;
   padding: 3rem;
@@ -38,12 +38,12 @@
 .contactFormSection {
   padding: 6rem 2rem;
   text-align: center;
-  background: $color-light;
+  background: $color-bg-comp;
 
   .sectionTitle {
     font-family: $font-primary;
     font-weight: $font-weight-bold;
-    font-size: 2.4rem;
+    font-size: 4.5rem;
     color: $color-primary;
     margin-bottom: 0.8rem;
   }
@@ -63,7 +63,7 @@
 
     iframe {
       width: 100%;
-      min-height: 650px;
+      height: 850px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
