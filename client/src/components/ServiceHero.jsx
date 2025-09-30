@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../styles/ServiceHero.module.scss";
 import heroImg from "../assets/ServiceHero.webp"; 
+import { Link } from "react-router-dom";
 
 
 const ServicesHero = () => {
@@ -43,7 +44,7 @@ const ServicesHero = () => {
           Compassionate support designed to improve quality of life for you and
           your loved ones. Explore the services we proudly provide.
         </p>
-        <button className={styles.secondaryBtn}>Refer a Loved One</button>        
+        <Link to="/referral" className={styles.secondaryBtn}>Refer a Loved One</Link>        
       </div>
     </header>
   );

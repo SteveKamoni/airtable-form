@@ -51,10 +51,6 @@ const ResourcesHero = () => {
             Guides, tips, and expert insights to support you and your loved ones
             in every step of the care journey.
           </p>
-          <div className={styles.searchBox}>
-            <input type="text" placeholder="Search resources..." />
-            <button>Search</button>
-          </div>
         </div>
       </div>
     </section>

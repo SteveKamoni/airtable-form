@@ -1,17 +1,30 @@
 .hero {
+  position: relative;
   height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(
+  padding: 0 2rem;
+  overflow: hidden;
+  background: url("../assets/referralHero.webp") center/cover no-repeat;
+
+  // subtle zoom-in effect on background
+  animation: bgZoom 10s ease-in-out infinite alternate;
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
       rgba($color-primary, 0.7),
       rgba($color-primary, 0.7)
-    ),
-    url("../assets/ServiceHero.webp") center/cover no-repeat;
-  padding: 0 2rem;
+    );
+    z-index: 1;
+  }
 
   .content {
+    position: relative;
+    z-index: 2;
     max-width: 1000px;
 
     h1 {
@@ -37,12 +50,23 @@
       border-radius: 30px;
       font-size: 1rem;
       cursor: pointer;
-      transition: 0.3s;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 
       &:hover {
-        background: darken($color-primary, 10%);
+        background: color.adjust($color-primary, $lightness: -10%);
         transform: translateY(-3px);
       }
     }
+  }
+}
+
+// subtle breathing zoom for hero background
+@keyframes bgZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
   }
 }

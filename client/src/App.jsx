@@ -8,7 +8,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ReferralPage from "./pages/referralpage";
 import ScrollToTop from "./components/ScrollToTop";
-
+import Articles from "./pages/Articles";
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/referral" element={<ReferralPage/>}/>
+        <Route path="/articles" element={<Articles/>}/>
       </Routes>
       <Footer/>
     </Router>

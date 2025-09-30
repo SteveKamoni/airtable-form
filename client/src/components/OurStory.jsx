@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../styles/ourStory.module.scss";
-import imgA from "../assets/NatureBG.webp";      // replace with real files
-import imgB from "../assets/NatureBG2.webp";
-import imgC from "../assets/NatureBG.webp";
+import imgA from "../assets/story1.webp";      // replace with real files
+import imgB from "../assets/story2.webp";
+import imgC from "../assets/story3.webp";
 
 const FadeInOnView = ({ children, threshold = 0.18, rootMargin = "0px 0px -8% 0px" }) => {
   const ref = React.useRef(null);

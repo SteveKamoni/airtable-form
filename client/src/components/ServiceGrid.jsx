@@ -9,6 +9,7 @@ const services = [
     description:
       "Meaningful companionship to reduce loneliness and provide emotional support.",
     benefits: ["Conversation & games", "Errand assistance", "Emotional comfort"],
+    more: "Our companion services go beyond presence — we carefully match companions based on personality and interests, creating genuine and enriching human connections."
   },
   {
     icon: <Utensils size={40} />,
@@ -16,6 +17,7 @@ const services = [
     description:
       "Help with daily household tasks, ensuring your home remains safe and comfortable.",
     benefits: ["Light cleaning & laundry", "Meal preparation", "Organization help"],
+    more: "We tailor homemaking support to each individual’s lifestyle, ensuring meals, cleaning, and home organization align with personal preferences and routines."
   },
   {
     icon: <HandHeart size={40} />,
@@ -23,6 +25,7 @@ const services = [
     description:
       "Temporary relief for family caregivers, ensuring loved ones receive trusted care.",
     benefits: ["Short-term support", "Flexible scheduling", "Peace of mind for families"],
+    more: "Our respite care offers caregivers peace of mind by stepping in seamlessly, maintaining continuity of care, and ensuring loved ones receive compassionate support."
   },
   {
     icon: <HeartPulse size={40} />,
@@ -30,6 +33,7 @@ const services = [
     description:
       "Professional assistance with daily living activities for independence and dignity.",
     benefits: ["Bathing & dressing", "Mobility support", "Medication reminders"],
+    more: "We prioritize dignity and independence while assisting with personal care, tailoring support to each individual’s physical needs and comfort level."
   },
   {
     icon: <Activity size={40} />,
@@ -37,6 +41,7 @@ const services = [
     description:
       "Engaging programs to keep clients physically active, mentally stimulated, and happy.",
     benefits: ["Gentle exercises", "Recreational activities", "Cognitive support"],
+    more: "From light exercise to stimulating games, we help clients maintain vitality, mental clarity, and joy in daily life."
   },
   {
     icon: <Home size={40} />,
@@ -44,6 +49,7 @@ const services = [
     description:
       "Support in creating and maintaining a secure, accessible home for clients.",
     benefits: ["Fall prevention", "Home safety checks", "Accessibility adjustments"],
+    more: "We help create and maintain safe, accessible home environments — reducing risks and adapting spaces to each individual’s needs."
   },
 ];
 
@@ -54,17 +60,12 @@ const ServicesGrid = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-        }
+        if (entries[0].isIntersecting) setIsVisible(true);
       },
       { threshold: 0.2 }
     );
-
     if (ref.current) observer.observe(ref.current);
-    return () => {
-      if (ref.current) observer.unobserve(ref.current);
-    };
+    return () => ref.current && observer.unobserve(ref.current);
   }, []);
 
   return (
@@ -88,7 +89,7 @@ const ServicesGrid = () => {
                 <li key={i}>{benefit}</li>
               ))}
             </ul>
-            <button className={styles.cta}>Learn More</button>
+            <p className={styles.more}>{service.more}</p>
           </div>
         ))}
       </div>

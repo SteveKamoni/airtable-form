@@ -1,6 +1,7 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import styles from "../styles/serviceCTA.module.scss";
+import { Link } from "react-router-dom";
 
 const ServiceCTA = () => {
   const { ref, inView } = useInView({
@@ -18,12 +19,12 @@ const ServiceCTA = () => {
           with warmth, professionalism, and dedication.
         </p>
         <div className={styles.buttons}>
-          <a href="/contact" className={styles.primaryBtn}>
+          <Link to="/contact" className={styles.primaryBtn}>
             Book a Free Consultation
-          </a>
-          <a href="tel:+123456789" className={styles.secondaryBtn}>
+          </Link>
+          {/* <Link to="/" className={styles.secondaryBtn}>
             Call Us Now
-          </a>
+          </Link> */}
         </div>
       </div>
     </section>

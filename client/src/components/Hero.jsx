@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/Hero.module.scss";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -16,8 +17,8 @@ const Hero = () => {
           Because home isn’t just where you live — it’s where you feel safe, valued, and loved.
         </p>
         <div className={styles.ctaGroup}>
-          <button className={styles.primaryBtn}>About Us</button>
-          <button className={styles.secondaryBtn}>Refer a Loved One</button>
+          <Link to="/about" className={styles.primaryBtn}>About Us</Link>
+          <Link to="referral" className={styles.secondaryBtn}>Refer a Loved One</Link>
         </div>
       </div>
     </section>

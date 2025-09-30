@@ -5,6 +5,7 @@ import { MapPin, Phone, Mail, Facebook, Twitter, Instagram } from "lucide-react"
 const ContactSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const currentRef = ref.current;
@@ -25,21 +26,30 @@ const ContactSection = () => {
         
         {/* LEFT: FORM */}
         <div className={styles.formWrapper}>
-            <section className={styles.contactFormSection} id="contact-form">
-              <h2 className={styles.sectionTitle}>Get in Touch</h2>
-              <p className={styles.sectionSubtitle}>
-                Have questions or need more information? Fill out the form below and our team will reach out to you.
-              </p>
+          <section className={styles.contactFormSection} id="contact-form">
+            <h2 className={styles.sectionTitle}>Get in Touch</h2>
+            <p className={styles.sectionSubtitle}>
+              Have questions or need more information? Fill out the form below and our team will reach out to you.
+            </p>
 
-              <div className={styles.formWrapper}>
-                          <iframe
-            className={styles.airtableEmbed}
-            src="https://airtable.com/embed/appXQcUUnu2s5DKku/pagT1uefFjRu9UWWh/form"
-            frameBorder="0"
-            title="Contact Form"
-          ></iframe>
-               </div>
-            </section>
+            <div className={styles.formWrapper}>
+              {isLoading && (
+                <div className={styles.loaderWrapper}>
+                  <div className={styles.loader}></div>
+                  <p>Loading form...</p>
+                </div>
+              )}
+
+              <iframe
+                className={styles.airtableEmbed}
+                src="https://airtable.com/embed/appXQcUUnu2s5DKku/pagT1uefFjRu9UWWh/form"
+                frameBorder="0"
+                title="Contact Form"
+                onLoad={() => setIsLoading(false)}
+                style={{ display: isLoading ? "none" : "block" }}
+              ></iframe>
+            </div>
+          </section>
         </div>
 
         {/* RIGHT: CONTACT INFO */}

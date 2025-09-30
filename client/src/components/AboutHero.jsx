@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/aboutHero.module.scss";
-import aboutHeroImg from "../assets/abouthero.jpg"; // ✅ adjust path to your image
+import aboutHeroImg from "../assets/abouthero.webp"; // ✅ adjust path to your image
 
 const AboutHero = () => {
   return (

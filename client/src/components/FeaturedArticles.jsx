@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "../styles/FeaturedArticles.module.scss";
 
 // replace with actual imports (include file extensions)
@@ -62,7 +63,7 @@ const featured = [
     excerpt:
       "A practical guide to evaluating care needs, comparing service types, and selecting the right plan for your family.",
     image: choose,
-    href: "/resources/how-to-choose-homecare",
+    href: "/articles/how-to-choose-homecare",
   },
   {
     id: "a2",
@@ -71,7 +72,7 @@ const featured = [
     excerpt:
       "Nutrition tips and meal ideas tailored to common dietary needs for older adults and those with chronic conditions.",
     image: mealplanning,
-    href: "/resources/meal-planning-seniors",
+    href: "/articles/meal-planning-seniors",
   },
   {
     id: "a3",
@@ -80,7 +81,7 @@ const featured = [
     excerpt:
       "Small, cost-effective changes that reduce fall risk and make daily life easier for people with mobility limits.",
     image: saferhome,
-    href: "/resources/safer-home-checklist",
+    href: "/articles/safer-home-checklist",
   },
   {
     id: "a4",
@@ -89,7 +90,7 @@ const featured = [
     excerpt:
       "What respite care offers, how to plan for it, and real-world benefits for caregivers and their families.",
     image: respitecare,
-    href: "/resources/respite-care-explained",
+    href: "/articles/respite-care-explained",
   },
 ];
 
@@ -120,9 +121,9 @@ const FeaturedArticles = () => {
 
                 <p className={styles.excerpt}>{item.excerpt}</p>
 
-                <a href={item.href} className={styles.readMore} aria-label={`Read more: ${item.title}`}>
+                <Link to={item.href} className={styles.readMore} aria-label={`Read more: ${item.title}`}>
                   Read more →
-                </a>
+                </Link>
               </div>
             </article>
           </FadeInOnView>

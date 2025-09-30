@@ -20,7 +20,7 @@
       color: $color-primary;
       margin-bottom: 1rem;
     }
-    
+
     p {
       font-size: 1.2rem;
       color: $color-text;
@@ -29,20 +29,19 @@
     }
   }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); // Always 3 per row on desktop
-  gap: 2.5rem;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
 
-  @media (max-width: $breakpoint-tablet) {
-    grid-template-columns: repeat(2, 1fr); // 2 per row on tablet
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint-phone) {
+      grid-template-columns: 1fr;
+    }
   }
-
-  @media (max-width: $breakpoint-phone) {
-    grid-template-columns: 1fr; // 1 per row on mobile
-  }
-}
-
 
   .card {
     background: $color-white;
@@ -52,6 +51,8 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     border: 2px solid transparent;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    display: flex;
+    flex-direction: column;
 
     &:hover {
       transform: translateY(-8px);
@@ -101,20 +102,13 @@
       }
     }
 
-    .cta {
-      background: $color-accent;
-      color: $color-white;
+    .more {
       font-size: 0.95rem;
-      font-weight: $font-weight-medium;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.6rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-
-      &:hover {
-        background: color.adjust($color-accent,$lightness: -8%);
-      }
+      color: $color-text;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+      font-family: $font-body;
+      opacity: 0.95;
     }
   }
 }
