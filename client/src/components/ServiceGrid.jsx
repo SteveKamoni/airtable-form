@@ -73,7 +73,7 @@ const ServicesGrid = () => {
       <div className={styles.header}>
         <h2>Our Care Services</h2>
         <p>
-          At Compassionate Care, we provide a holistic range of services designed to
+          At Akdar Care Services, we provide a holistic range of services designed to
           support comfort, dignity, and well-being at home.
         </p>
       </div>

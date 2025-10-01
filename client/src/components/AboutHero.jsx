@@ -12,7 +12,7 @@ const AboutHero = () => {
         <h3 className={styles.subtitle}>About Us</h3>
         <h1 className={styles.title}>Caring With Heart, Every Step of the Way</h1>
         <p className={styles.text}>
-          At Compassionate Care, we believe in more than just assistance — we bring dignity,
+          At Akdar Home Care Services, we believe in more than just assistance — we bring dignity,
           warmth, and companionship into every home. Our story is one of commitment to improving
           lives, one person at a time.
         </p>

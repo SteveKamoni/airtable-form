@@ -2,16 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "../styles/Footer.module.scss";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import logo from "../assets/logo.webp";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       {/* Top Grid */}
       <div className={styles.top}>
-        {/* Brand */}
+        {/* Brand + Logo */}
         <div className={styles.brand}>
-          <h2>Compassionate Care</h2>
-          <p>Caring for you with dignity and compassion.</p>
+          <img src={logo} alt="Akdar Services Logo" className={styles.logo} />
+          <h2>Akdar Services</h2>
+          <p>Delivering trusted, personalized home and community-based care with dignity, independence, and compassion.</p>
         </div>
 
         {/* Quick Links */}
@@ -30,9 +32,9 @@ const Footer = () => {
         {/* Contact */}
         <div className={styles.contact}>
           <h3>Contact Us</h3>
-          <p><FaMapMarkerAlt /> 123 Care St, Wellness City</p>
-          <p><FaPhoneAlt /> (123) 456-7890</p>
-          <p><FaEnvelope /> info@compassionatecare.com</p>
+          <p><FaMapMarkerAlt /> 405 W 34th St, Sioux Falls, SD</p>
+          <p><FaPhoneAlt /> 605-368-1769</p>
+          <p><FaEnvelope /> akdarservices@gmail.com</p>
         </div>
 
         {/* Socials */}
@@ -45,21 +47,11 @@ const Footer = () => {
             <a href="#"><FaInstagram /></a>
           </div>
         </div>
-
-        {/* Newsletter */}
-        <div className={styles.newsletter}>
-          <h3>Newsletter</h3>
-          <p>Subscribe for updates and care tips.</p>
-          <form>
-            <input type="email" placeholder="Enter your email" required />
-            <button type="submit">Subscribe</button>
-          </form>
-        </div>
       </div>
 
       {/* Bottom Bar */}
       <div className={styles.bottom}>
-        <p>&copy; {new Date().getFullYear()} Compassionate Care. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Akdar Services. All Rights Reserved.</p>
         <div className={styles.legal}>
           <Link to="/privacy">Privacy Policy</Link>
           <Link to="/terms">Terms of Service</Link>

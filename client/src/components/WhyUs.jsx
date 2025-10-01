@@ -20,16 +20,15 @@ const WhyUs = () => {
         >
           <h1>WHY US</h1>
            <p>
-          Compassionate, professional, and personalized — our services are designed to meet your unique needs with dignity and respect.
+          Compassionate, professional, and personalized — our care is designed to support dignity, independence, and meaningful living at home and in the community.
         </p>
         </div>
       <div className={styles.container}>
         {/* Left: Checklist */}
         <div className={styles.content}>
-          <h2>Why Choose Us</h2>
+          <h2>Why Choose Akdar Services</h2>
           <p>
-            At Compassionate Care, we go beyond basic assistance. Our focus is on
-            building trust, dignity, and lasting relationships with every client.
+          At Akdar Services, we go beyond providing care — we build trust, independence, and dignity into every life we support. Our compassionate team creates personalized care plans, delivers safe and reliable support, and works closely with families to ensure every individual receives the attention and respect they deserve.  
           </p>
           <ul className={styles.list}>
             {points.map((point, i) => (

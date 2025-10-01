@@ -34,7 +34,7 @@ const CareServices = () => {
       <div className={styles.header}>
         <h2>Our Care Services</h2>
         <p>
-          Compassionate, professional, and personalized — our services are designed to meet your unique needs with dignity and respect.
+          Compassionate, professional, and personalized — our services are designed to support dignity, independence, and quality of life at home and in the community.
         </p>
       </div>
 
