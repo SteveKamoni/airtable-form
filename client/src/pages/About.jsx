@@ -1,7 +1,7 @@
 import React from 'react'
 import AboutHero from '../components/AboutHero'
 import OurStory from '../components/OurStory'
-import MeetOurTeam from '../components/MeetOurTeam'
+// import MeetOurTeam from '../components/MeetOurTeam'
 import MissionValues from '../components/MissionValues'
 import AboutCTA from '../components/AboutCTA'
 
@@ -10,7 +10,7 @@ const About = () => {
     <>
       <AboutHero />
         <OurStory />
-        <MeetOurTeam />
+        {/* <MeetOurTeam /> */}
         <MissionValues />
         <AboutCTA />
     </>
